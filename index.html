@@ -21,29 +21,29 @@
           <header>
             <h1>Hello world!</h1>
             <h2>Name</h2>
-            <nav>
-              <i class="menu-btn fa fa-2x fa-bars" id="menu" onclick="toggleDropdownMenu()"></i>
-              <ul id="nav-list">
-                  <li><a href="#"></a>Home</li>
-                  <li class="dropdown">
-                    <a>Link 2</a>
-                    <ul class="drop-nav">
-                      <li><a href="#"></a>sublink 1</li>
-                      <li><a href="#"></a>sublink 2</li>
-                      <li><a href="#"></a>sublink 3</li>
-                      <li><a href="#"></a>sublink 4</li>
-                      <li><a href="#"></a>sublink 5</li>
-                    </ul>
-                  </li>
-                  <li><a href="#"></a>link 3</li>
-                  <li><a href="#"></a>link 4</li>
-                  <li><a href="#"></a>link 5</li>
-              </ul>
-            </nav>
             <figure>
               <img src="http://via.placeholder.com/200x200" alt="Logo">
             </figure>
           </header>
+          <nav>
+            <i class="menu-btn fa fa-2x fa-bars" id="menu" onclick="toggleDropdownMenu()"></i>
+            <ul id="nav-list">
+                <li><a href="#"></a>Home</li>
+                <li class="dropdown">
+                  <a href="#">Link 2</a>
+                  <ul class="drop-nav">
+                    <li><a href="#"></a>sublink 1</li>
+                    <li><a href="#"></a>sublink 2</li>
+                    <li><a href="#"></a>sublink 3</li>
+                    <li><a href="#"></a>sublink 4</li>
+                    <li><a href="#"></a>sublink 5</li>
+                  </ul>
+                </li>
+                <li><a href="#"></a>link 3</li>
+                <li><a href="#"></a>link 4</li>
+                <li><a href="#"></a>link 5</li>
+            </ul>
+          </nav>
           <main>
             <section class="slideshow">
               <!-- insert slideshow -->
@@ -57,6 +57,35 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur totam dolore laudantium necessitatibus quo sunt, laboriosam quaerat dolorum suscipit molestiae ut! Amet atque reiciendis, voluptate commodi obcaecati ratione reprehenderit culpa.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga porro nemo fugit et velit deserunt cum facilis ex, corrupti consectetur omnis veniam tenetur harum laboriosam quo voluptatem nihil eius labore.</p>
               <p>Facilis, non! Nihil quibusdam, consequatur nam repellat voluptatum quae beatae expedita, dolore libero, velit quod atque facere. Quos, adipisci velit laudantium vitae doloremque ipsa! Repellat facere, veritatis quibusdam consequuntur harum!</p>
+            </section>
+            <section class="countdown-timer">
+              <h3>Countdown To This Event!</h3>
+              <div class="countdown-wrapper">
+                <div id="years">
+                  <h4>Years Remaining:</h4>
+                  <span id="yearsBox"></span>
+                </div>
+                <div id="months">
+                  <h4>Months Remaining:</h4>
+                  <span id="monthsBox"></span>
+                </div>
+                <div id="days">
+                  <h4>Days Remaining:</h4>
+                  <span id="daysBox"></span>
+                </div>
+                <div id="hours">
+                  <h4>Hours Remaining:</h4>
+                  <span id="hoursBox"></span>
+                </div>
+                <div id="minutes">
+                  <h4>Minutes Remaining:</h4>
+                  <span id="minutesBox"></span>
+                </div>
+                <div id="seconds">
+                  <h4>Seconds Remaining:</h4>
+                  <span id="secondsBox"></span>
+                </div>
+              </div>
             </section>
           </main>
           <footer>

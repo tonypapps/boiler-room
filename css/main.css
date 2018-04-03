@@ -540,54 +540,6 @@ header {
   padding-top: 20px;
   padding-bottom: 5px;
 }
-header nav {
-  width: 100%;
-  margin: var(--top-bottom);
-  margin-left: var(--left-right);
-  margin-right: var(--left-right);
-  z-index: 99;
-  top: 0;
-  position: fixed;
-  grid-area: navigation;
-}
-header nav a:visited {
-  color: red;
-}
-header nav .dropdown {
-  position: relative;
-  color: whitesmoke;
-}
-header nav .drop-nav {
-  position: absolute;
-  display: none;
-}
-header nav .drop-nav li {
-  border-bottom: 1px solid rgba(245, 245, 245, 0.2);
-}
-header nav .dropdown:hover > .drop-nav {
-  display: block;
-}
-header nav ul {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: none;
-}
-header nav ul li {
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
-  margin: 0 auto;
-  background-color: black;
-  color: var(--ws);
-  border-bottom: solid 1px var(--ws);
-  padding: 1em;
-}
-header nav ul li a {
-  padding: 1em;
-  color: var(--ws);
-}
 header h1 {
   text-align: center;
   padding-right: 5%;
@@ -599,6 +551,53 @@ header h2 {
   padding-right: 5%;
   grid-area: subtitle;
   font-style: italic;
+}
+
+nav {
+  background-color: black;
+  width: 100%;
+  margin: var(--top-bottom);
+  margin-left: var(--left-right);
+  margin-right: var(--left-right);
+  z-index: 99;
+  top: 0;
+  position: fixed;
+  grid-area: navigation;
+}
+nav a:visited {
+  color: red;
+}
+nav .dropdown {
+  position: relative;
+  color: whitesmoke;
+}
+nav .drop-nav {
+  position: absolute;
+  display: none;
+}
+nav .dropdown:hover > .drop-nav {
+  display: block;
+}
+nav ul {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+nav ul li {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: black;
+  color: var(--ws);
+  border-bottom: solid 1px var(--ws);
+  padding: 1em;
+}
+nav ul li a {
+  padding: 1em;
+  color: var(--ws);
 }
 
 main {
@@ -652,6 +651,13 @@ main .slideshow .carousel button {
 main .slideshow button:focus, main .slideshow button.active:focus {
   outline: none;
 }
+main .countdown-timer .countdown-wrapper {
+  display: flex;
+  padding: var(--top-bottom);
+  padding-left: var(--p-left-right);
+  padding-right: var(--p-left-right);
+  font-size: 0.75em;
+}
 
 footer {
   background-color: black;
@@ -672,14 +678,24 @@ footer {
   }
 }
 @media screen and (min-width: 767px) {
-  header .fa-bars {
+  header figure {
+    grid-area: logo;
+    max-width: 100%;
+  }
+
+  .fa-bars {
     display: none;
   }
-  header nav {
-    position: static;
+
+  nav {
+    position: fixed;
+    margin-top: 200px;
+    margin-left: -0.5%;
   }
-  header nav ul {
-    background-color: black;
+  nav .drop-nav {
+    margin-top: 30px;
+  }
+  nav ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -689,22 +705,18 @@ footer {
     z-index: 5;
     top: 0;
   }
-  header nav ul li {
+  nav ul li {
     padding-bottom: 0;
     padding-right: 20px;
     width: 100%;
   }
-  header nav ul li a {
+  nav ul li a {
     color: black;
   }
-  header nav ul li:hover {
+  nav ul li:hover {
     border-radius: var(--br);
     background-color: navy;
     transition: 0.5s;
-  }
-  header figure {
-    grid-area: logo;
-    max-width: 100%;
   }
 }
 /* ==========================================================================
@@ -877,6 +889,6 @@ footer {
   header {
     display: grid;
     grid-template: 1fr 1fr / 25% 75%;
-    grid-template-areas: "logo title" "logo subtitle" "logo navigation";
+    grid-template-areas: "logo title" "logo subtitle";
   }
 }
