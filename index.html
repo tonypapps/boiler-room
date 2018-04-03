@@ -3,37 +3,66 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/main.css">
+        <title></title>
     </head>
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-        <header>
-          <h1>Hello world!</h1>
-          <nav>
-            <ul>
-              <li><a href="#"></a>link 1</li>
-              <li><a href="#"></a>link 2</li>
-              <li><a href="#"></a>link 3</li>
-              <li><a href="#"></a>link 4</li>
-              <li><a href="#"></a>link 5</li>
-            </ul>
-          </nav>
-        </header>
-        <main>
-          <section>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur totam dolore laudantium necessitatibus quo sunt, laboriosam quaerat dolorum suscipit molestiae ut! Amet atque reiciendis, voluptate commodi obcaecati ratione reprehenderit culpa.</p>
-          </section>
-        </main>
-        <!-- Add your site or application content here -->
+        <div class="wrapper">
+          <header>
+            <h1>Hello world!</h1>
+            <h2>Name</h2>
+            <nav>
+              <i class="menu-btn fa fa-2x fa-bars" id="menu" onclick="toggleDropdownMenu()"></i>
+              <ul id="nav-list">
+                  <li><a href="#"></a>Home</li>
+                  <li class="dropdown">
+                    <a>Link 2</a>
+                    <ul class="drop-nav">
+                      <li><a href="#"></a>sublink 1</li>
+                      <li><a href="#"></a>sublink 2</li>
+                      <li><a href="#"></a>sublink 3</li>
+                      <li><a href="#"></a>sublink 4</li>
+                      <li><a href="#"></a>sublink 5</li>
+                    </ul>
+                  </li>
+                  <li><a href="#"></a>link 3</li>
+                  <li><a href="#"></a>link 4</li>
+                  <li><a href="#"></a>link 5</li>
+              </ul>
+            </nav>
+            <figure>
+              <img src="http://via.placeholder.com/200x200" alt="Logo">
+            </figure>
+          </header>
+          <main>
+            <section class="slideshow">
+              <!-- insert slideshow -->
+              <figure class="carousel" id="carousel">
+                <button type="button" id="carousel-left-btn" class="carousel-btn" onclick="previousImage()"> &lang;</button>
+                <button type="button" id="carousel-right-btn" class="carousel-btn" onclick="nextImage()"> &rang;</button>
+              </figure>
+            </section>
+            <section>
+              <h3>Stuff Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur totam dolore laudantium necessitatibus quo sunt, laboriosam quaerat dolorum suscipit molestiae ut! Amet atque reiciendis, voluptate commodi obcaecati ratione reprehenderit culpa.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga porro nemo fugit et velit deserunt cum facilis ex, corrupti consectetur omnis veniam tenetur harum laboriosam quo voluptatem nihil eius labore.</p>
+              <p>Facilis, non! Nihil quibusdam, consequatur nam repellat voluptatum quae beatae expedita, dolore libero, velit quod atque facere. Quos, adipisci velit laudantium vitae doloremque ipsa! Repellat facere, veritatis quibusdam consequuntur harum!</p>
+            </section>
+          </main>
+          <footer>
+            <small>Anthony Pappalardo III &copy; 2018 </small>
+          </footer>
+        </div>
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
@@ -41,10 +70,5 @@
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     </body>
 </html>
