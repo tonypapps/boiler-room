@@ -12,6 +12,8 @@ function toggleDropdownMenu(){
     isHidden = true;
   }
 }
+// ========sticky nav=========
+
 
 // carousel
 var i = 0;
